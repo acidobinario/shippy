@@ -32,7 +32,7 @@ func (repo *VesselRepository) FindAvailable(spec *pb.Specification) (*pb.Vessel,
 
 // Our grpc service handler
 type service struct {
-	repo repository
+	repo *VesselRepository
 }
 
 func (s *service) FindAvailable(ctx context.Context, req *pb.Specification, res *pb.Response) error {
