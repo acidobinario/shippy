@@ -50,7 +50,10 @@ func (s *service) FindAvailable(ctx context.Context, req *pb.Specification, res 
 
 func main() {
 	vessels := []*pb.Vessel{
-		&pb.Vessel{Id: "vessel001", Name: "Boaty McBoatface", MaxWeight: 200000, Capacity: 500},
+		&pb.Vessel{Id: "vessel004", Name: "smol boat", MaxWeight: 50, Capacity: 25},
+		&pb.Vessel{Id: "vessel001", Name: "Boaty McBoatface", MaxWeight: 500, Capacity: 250},
+		&pb.Vessel{Id: "vessel002", Name: "Floaty floater", MaxWeight: 1000, Capacity: 100},
+		&pb.Vessel{Id: "vessel003", Name: "The big cargo", MaxWeight: 20000, Capacity: 500},
 	}
 	repo := &VesselRepository{vessels}
 
